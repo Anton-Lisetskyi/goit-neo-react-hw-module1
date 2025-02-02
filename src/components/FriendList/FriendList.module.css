@@ -1,0 +1,5 @@
+.friendListBlock {
+  display: flex;
+  justify-content: space-between;
+  margin: 48px;
+}

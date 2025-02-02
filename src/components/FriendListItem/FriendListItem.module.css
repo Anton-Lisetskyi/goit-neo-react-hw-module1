@@ -1,0 +1,26 @@
+.friendItem {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 2px solid rgba(5, 5, 5, 0.63);
+}
+
+.friendItem img {
+  border-radius: 50%;
+}
+
+.friendItem p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.onlineStatus {
+  color: green;
+}
+
+.offlineStatus {
+  color: red;
+}
