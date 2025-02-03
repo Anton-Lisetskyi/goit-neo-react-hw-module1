@@ -1,8 +1,8 @@
 import FriendListItem from "../FriendListItem/FriendListItem";
 import styles from "./FriendList.module.css";
-import friends from "../../fiends.json";
+import PropTypes from "prop-types";
 
-const FriendList = () => {
+const FriendList = ({ friends }) => {
   return (
     <div className={styles.friendListBlock}>
       {friends.map((friend, index) => (
@@ -15,6 +15,17 @@ const FriendList = () => {
       ))}
     </div>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
 };
 
 export default FriendList;
